@@ -1,16 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, Tab } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { SchedulePage } from '../pages/schedule/schedule';
+import { SessionPage } from '../pages/session/session';
+import { AgendaPage } from '../pages/agenda/agenda';
+import { TabBar } from '../pages/tabbar/tabbar';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    SchedulePage,
+    SessionPage,
+    AgendaPage,
+    TabBar
   ],
   imports: [
     BrowserModule,
@@ -19,7 +25,10 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    SchedulePage,
+    SessionPage,
+    AgendaPage,
+    TabBar
   ],
   providers: [
     StatusBar,
